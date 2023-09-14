@@ -1,0 +1,1 @@
+export const userTypes = ['Administrateur', 'Etudiant', 'Professeur']
