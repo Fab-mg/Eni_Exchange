@@ -9,11 +9,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+
 //import routes here
 const userRoutes = require('./routes/user.routes');
+const postRouter  = require('./routes/post.routes');
+const commentRouter = require('./routes/comment.routes')
 
 //paste routes here
 app.use('/users/', userRoutes);
+app.use('/posts',postRouter);
+app.use('/comment',commentRouter);
+///////connection DB////////////
+ 
+dbConnection;
+
+//////////////////
 
 const port = process.env.PORT || 6969;
 app.listen(port, () => {
