@@ -14,11 +14,13 @@ app.use(cors());
 const userRoutes = require('./routes/user.routes');
 const postRouter  = require('./routes/post.routes');
 const commentRouter = require('./routes/comment.routes')
+const relationRouter = require('./routes/relation.routes')
 
 //paste routes here
 app.use('/users/', userRoutes);
 app.use('/posts',postRouter);
 app.use('/comment',commentRouter);
+app.use('/relation',relationRouter)
 ///////connection DB////////////
  
 dbConnection;

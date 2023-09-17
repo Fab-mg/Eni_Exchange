@@ -1,5 +1,4 @@
-require('../models/users.model') 
-require('../models/comment.model')
+
 const Post = require('../models/posts.model');
 
 const createPost = async(data)=>{

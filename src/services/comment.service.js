@@ -24,7 +24,7 @@ const editComment = async(id,data)=>{
 const getComment = async(data)=>{
     await Comment.find({post:data})
 }
-S
+
 const removeComment = async(id)=>{
     await Comment.findByIdAndDelete(id)
 }

@@ -22,13 +22,10 @@ const Post = new mongoose.Schema({
         type :String ,
          required :true
         },
-     cible : {
+     cible : [{
         type : String,
-        enum : ["null",[{
-            userId : String,
-           
-        }]]
-     },
+        default:"null"
+     }],
     autheur : {
          type: String,
          required:true,
