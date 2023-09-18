@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Post = new mongoose.Schema({
      IdPost : {
         type:mongoose.Types.ObjectId,
-        required:true
+       
     },
      type : {
         type: String , 
@@ -46,12 +46,12 @@ const Post = new mongoose.Schema({
     dateModif : {
         type:Date,
         required:false,
-        enum : ['null',Date.now]
+        
     },
     dateSuppr : {
         type:Date,
         required:false,
-        enum : ['null',Date.now]
+        
     },
     status:{
         type:String , 
@@ -59,13 +59,12 @@ const Post = new mongoose.Schema({
         enum:['créé','publié']
     },
     participant:[{
-        userId : {
             type:String ,
             required : true
         }
-    }],
+    ],
     like : [{
-        userId : String,
+        type: String
       
        }],
     commentaire :[{ 

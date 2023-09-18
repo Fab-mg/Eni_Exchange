@@ -7,22 +7,23 @@ const createComment = async(data)=>{
         commentaireCible : data.commentaireCible,
         commenttaireParent : data.commenttaireParent,
         text : data.text,
-        dateModif : "null"
+        like: data.like
       });
 
       await comment.save();
 }
 
 const editComment = async(id,data)=>{
-    let objet = {
+    const objet = {
                     text : data.text,
-                    dateModif : Date.now
-             };
+                    dateModif : Date.now()
+             }
                 await Comment.findByIdAndUpdate(id,{$set:objet});
 }
 
 const getComment = async(data)=>{
-    await Comment.find({post:data})
+    const result=await Comment.find({post:data})
+    return result;
 }
 
 const removeComment = async(id)=>{

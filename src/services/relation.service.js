@@ -5,7 +5,7 @@ const createRelation = async(data)=>{
                 cible : data.cible,
                 type : "amis",
                 autheur : data.autheur,
-                dateCreation : data.dateCreation
+                
             
     })
     await relation.save()

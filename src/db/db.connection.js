@@ -5,7 +5,7 @@ const connectionParams = {
   useUnifiedTopology: true,
 };
 
-const uri = process.env.MONGODB_ADDON_URI || 'mongodb://localhost:27017';
+const uri = process.env.MONGODB_ADDON_URI || 'mongodb://localhost:27017/test2';
 console.log('uri: ', uri);
 const connection = mongoose
   .connect(uri, connectionParams)

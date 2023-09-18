@@ -18,14 +18,14 @@ const relationSchema = new mongoose.Schema({
             },
             dateCreation : {
                 type:Date,
-                required:true
+                default:Date.now
 
             }
 });
 
 const demandeRelationSchema = new mongoose.Schema({
 
-    IdRelation : mongoose.Types.ObjectId,
+    IddemandeRelation : mongoose.Types.ObjectId,
 
     cible : {
         type: String, 

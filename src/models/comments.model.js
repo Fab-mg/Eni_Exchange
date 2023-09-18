@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 const comment = new mongoose.Schema({
-    _id: mongoose.Types.ObjectId,
+    IdComment: mongoose.Types.ObjectId,
     post: 
     {
         type:String,
@@ -30,7 +30,7 @@ const comment = new mongoose.Schema({
 
     dateModif:{
         type:Date,
-        enum:["null",Date.now]
+        
     }
     
 })
