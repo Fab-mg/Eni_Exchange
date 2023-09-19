@@ -2,6 +2,8 @@ const Joi = require('joi');
 
 const createUserValidation = Joi.object({
   type: Joi.string().valid('Administrateur', 'Etudiant', 'Professeur').required(),
+  nom: Joi.string().required(),
+  prenom: Joi.string(),
   matricule: Joi.string().required(),
   niveau: Joi.string().valid('L1', 'L2', 'L3', 'M1', 'M2', 'Sortant'),
   userType: Joi.string().valid('IG', 'GB', 'SR'),

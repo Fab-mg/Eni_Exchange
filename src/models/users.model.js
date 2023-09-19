@@ -7,6 +7,14 @@ const userSchema = new mongoose.Schema({
     enum: ['Administrateur', 'Etudiant', 'Professeur'],
     required: true,
   },
+  nom: {
+    type: String,
+    required: true,
+  },
+  prenom: {
+    type: String,
+    required: false,
+  },
   matricule: {
     type: String,
     required: true,

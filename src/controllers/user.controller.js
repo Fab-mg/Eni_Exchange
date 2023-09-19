@@ -17,6 +17,8 @@ const createNewUser = async (req, res) => {
     const password = bcrypt.hashSync(value.password, 10);
     const userInfo = {
       type: value.type,
+      nom: value.nom,
+      prenom: value.prenom,
       matricule: value.matricule,
       niveau: value.niveau || null,
       userType: value.userType || null,
@@ -37,6 +39,10 @@ const createNewUser = async (req, res) => {
     return res.status(500).send({ message: 'True server error', error });
   }
 };
+
+// const getUserByEmail = async (email) => {
+
+// }
 
 module.exports = {
   createNewUser,
