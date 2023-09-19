@@ -14,6 +14,20 @@ const createUser = async (userInfo) => {
   }
 };
 
+const getUserByEmail = async (email) => {
+  if (!email) {
+    return null;
+  }
+  try {
+    const user = await User.findOne({ email: email });
+    return user;
+  } catch (error) {
+    console.log('Failed action', error);
+    return null;
+  }
+};
+
 module.exports = {
   createUser,
+  getUserByEmail,
 };

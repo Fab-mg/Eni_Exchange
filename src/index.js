@@ -11,9 +11,11 @@ app.use(cors());
 
 //import routes here
 const userRoutes = require('./routes/user.routes');
+const authRoutes = require('./routes/auth.routes');
 
 //paste routes here
 app.use('/users/', userRoutes);
+app.use('/auth/', authRoutes);
 
 const port = process.env.PORT || 6969;
 app.listen(port, () => {
